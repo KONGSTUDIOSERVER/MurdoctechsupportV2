@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <style>
+      :root {
+        --bg: #efefef;
+        --ink: #2f2f2f;
+        --blue: #7ecaf5;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .scene {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .art {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .numbers {
+        position: absolute;
+        left: 50%;
+        top: 18%;
+        transform: translateX(-50%);
+        width: min(62vw, 900px);
+        height: 320px;
+        opacity: 0.9;
+      }
+
+      .numbers svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .stroke {
+        fill: none;
+        stroke: var(--blue);
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .text-404 {
+        position: absolute;
+        left: 50%;
+        bottom: 12%;
+        transform: translateX(-50%);
+        margin: 0;
+        font-size: clamp(3.2rem, 5vw, 8rem);
+        line-height: 1;
+        font-weight: 400;
+        color: var(--ink);
+        letter-spacing: -0.06em;
+        font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scene" aria-label="404 error page">
+      <div class="art" aria-hidden="true">
+        <div class="numbers">
+          <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg">
+            <path class="stroke" d="M150 25V300"/>
+            <path class="stroke" d="M150 25H215V335"/>
+            <path class="stroke" d="M220 25V300"/>
+            <path class="stroke" d="M220 25H300V300"/>
+
+            <path class="stroke" d="M330 25H480V305"/>
+            <path class="stroke" d="M330 165H480"/>
+            <path class="stroke" d="M420 25V305"/>
+
+            <path class="stroke" d="M540 25V300"/>
+            <path class="stroke" d="M540 25H620V300"/>
+            <path class="stroke" d="M620 25V300"/>
+
+            <path class="stroke" d="M280 90Q340 40 420 90Q480 130 450 170Q420 205 340 190Q300 183 280 170"/>
+            <path class="stroke" d="M405 100Q440 60 470 100"/>
+            <path class="stroke" d="M308 157Q315 120 350 112"/>
+
+            <path class="stroke" d="M420 200L520 250"/>
+            <path class="stroke" d="M430 220Q495 200 540 240"/>
+            <path class="stroke" d="M480 245Q520 230 545 260"/>
+            <path class="stroke" d="M500 255Q517 290 530 310"/>
+            <path class="stroke" d="M460 245Q430 255 410 290"/>
+            <path class="stroke" d="M472 206Q485 196 490 176"/>
+
+            <path class="stroke" d="M225 292L285 292"/>
+            <path class="stroke" d="M300 292L350 292"/>
+            <path class="stroke" d="M514 292L554 292"/>
+            <path class="stroke" d="M565 292L625 292"/>
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="text-404">Nothing but me</h1>
+    </div>
+  </body>
+</html>
+
