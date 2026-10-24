@@ -1,0 +1,20 @@
+#main-menu .ai-menu { grid-column: 1 / -1; color: var(--ink); font: inherit; }
+.ai-menu h2 { color: var(--cyan); }
+.ai-panel { max-width: 760px; margin: auto; padding: 22px; background: var(--panel); border: 1px solid rgba(var(--cyan-rgb), .3); border-radius: 14px; box-shadow: 0 0 30px rgba(var(--cyan-rgb), .06); }
+.ai-intro { margin: 0 0 20px; color: var(--dim); line-height: 1.6; font-size: 13px; }
+.ai-messages { height: min(48vh, 450px); min-height: 220px; overflow-y: auto; overscroll-behavior: contain; padding: 4px; scrollbar-color: var(--cyan) var(--panel); }
+.ai-message { margin: 0 0 18px; padding: 16px; border: 1px solid rgba(255,255,255,.1); border-radius: 10px; background: var(--glass); overflow-wrap: anywhere; }
+.ai-message strong { color: var(--cyan); font-size: 12px; letter-spacing: 1px; }
+.ai-message p { margin: 9px 0 0; color: var(--ink); font-size: 14px; line-height: 1.7; white-space: pre-wrap; }
+.ai-user { margin-left: 36px; border-color: rgba(var(--magenta-rgb), .3); }
+.ai-user strong { color: var(--magenta); }
+#ai-form label { display: block; margin: 18px 0 8px; color: var(--cyan); font-size: 13px; }
+.ai-compose { display: flex; align-items: stretch; gap: 10px; }
+#ai-input { min-width: 0; flex: 1; resize: vertical; min-height: 64px; max-height: 180px; padding: 12px; border: 1px solid var(--dim); border-radius: 8px; background: var(--bg); color: var(--ink); font: inherit; font-size: 16px; line-height: 1.5; }
+#ai-input::placeholder { color: var(--dim); }
+#ai-input:focus-visible, #ai-form button:focus-visible, #ai-clear:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+#ai-send { align-self: stretch; border-radius: 8px; padding: 12px 20px; }
+#ai-send:disabled { opacity: .55; cursor: wait; }
+#ai-status { min-height: 22px; margin: 12px 0 0; color: var(--yellow); font-size: 13px; line-height: 1.6; }
+.ai-note { color: var(--dim); font-size: 11px; line-height: 1.7; margin: 10px 0 0; }
+@media (max-width: 520px) { .ai-panel { padding: 14px; } .ai-compose { flex-direction: column; } .ai-user { margin-left: 18px; } .ai-message { padding: 12px; } }
