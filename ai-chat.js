@@ -47,7 +47,7 @@
     const text = input.value.trim();
     if (!text || controller || !endpoint) return;
     if (location.protocol === 'file:') {
-      status.textContent = 'Open this site using START.cmd so the AI server can connect.';
+      status.textContent = 'Open the live Murdoc website to use AI chat.';
       return;
     }
     const request = new AbortController();
@@ -66,7 +66,7 @@
         body: JSON.stringify({ messages }),
         signal: request.signal
       });
-      const data = await response.json().catch(() => { throw new Error('The AI server is not available. Run the site using START.cmd.'); });
+      const data = await response.json().catch(() => { throw new Error('AI chat is temporarily unavailable. Please try again.'); });
       if (!response.ok) throw new Error(data.error || 'Could not send your message. Try again.');
       if (typeof data.reply !== 'string' || !data.reply.trim()) throw new Error('Gemini returned an empty reply. Try again.');
       if (controller !== request) return;

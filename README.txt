@@ -1,15 +1,23 @@
-Murdoc Tech Support V2 — GitHub Pages
+Murdoc Tech Support V2
 
-The original games and settings from the existing GitHub repository are
-preserved exactly in arcade.html. index.html adds an accessible AI chat panel.
+Website: https://kongstudioserver.github.io/MurdoctechsupportV2/
+AI backend: https://murdoc-ai.omarroblox21.workers.dev/api/chat
 
-GitHub Pages serves static files. Chat stays disabled until a secure external
-backend is connected. No Gemini key or other secret is included in this folder.
+The original arcade is preserved in arcade.html. The homepage adds an AI
+chat panel connected to a Cloudflare Worker. Gemini's key is a private
+Cloudflare secret named GEMINI_API_KEY. It is never sent to the browser.
 
-To connect a backend later, set the murdoc-ai-endpoint meta tag in index.html
-to its HTTPS chat endpoint. It must accept POST JSON {messages:[{role,text}]}
-and return JSON {reply:"..."}, and allow the website's origin using CORS.
-Keep your Gemini key on that backend. Never put it in this repository.
+The backend accepts browser requests from https://kongstudioserver.github.io.
+It validates message history, caps input size and output, handles API errors,
+and uses Cloudflare's rate-limiting binding for 12 requests per minute per IP
+per Cloudflare location. Shared networks share this limit. These limits are
+not a billing cap or authentication; origin checks restrict browsers, and
+non-browser clients can forge Origin. Google Gemini quotas still apply.
 
-The existing GitHub Pages main-branch publishing settings are reused.
-Local previews need an HTTP server for the arcade's service worker.
+Chat history lives only in the current tab and clears on reload. The last
+eight exchanges are sent to Gemini along with the next question.
+
+Backend source is maintained separately and is not published with this website.
+Keep .env, .dev.vars, and deployment credentials out of this repository.
+
+The site continues to use the existing main-branch GitHub Pages deployment.
