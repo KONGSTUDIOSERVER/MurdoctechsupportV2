@@ -1,0 +1,19 @@
+Murdoc Proxy uses the following unmodified browser libraries:
+
+Scramjet 1.1.0 - GNU AGPL v3
+https://github.com/MercuryWorkshop/scramjet/tree/v1.1.0
+https://www.npmjs.com/package/@mercuryworkshop/scramjet/v/1.1.0
+
+bare-mux 2.1.9 - MIT
+https://github.com/MercuryWorkshop/bare-mux
+https://www.npmjs.com/package/@mercuryworkshop/bare-mux/v/2.1.9
+
+libcurl-transport 1.5.2 - GNU AGPL v3
+https://github.com/MercuryWorkshop/CurlTransport
+https://www.npmjs.com/package/@mercuryworkshop/libcurl-transport/v/1.5.2
+
+Full licenses are in each vendor directory.
+Source for this integration: https://github.com/KONGSTUDIOSERVER/MurdoctechsupportV2/tree/main/proxy
+
+Wisp relay: wss://wisp.mercurywork.shop/
+The relay is operated by a third party. Availability and destination compatibility depend on that service.

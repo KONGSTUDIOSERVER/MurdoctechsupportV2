@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Murdoc Proxy</title>
+  <link rel="stylesheet" href="proxy.css">
+  <script src="vendor/scramjet/scramjet.all.js" defer></script>
+  <script src="vendor/bare-mux/index.js" defer></script>
+  <script type="module" src="proxy.mjs"></script>
+</head>
+<body>
+  <header>
+    <a class="button" href="../">◂ ARCADE</a>
+    <h1>MURDOC <span>PROXY</span></h1>
+    <span class="badge">WISP</span>
+  </header>
+  <main>
+    <form id="browse" aria-label="Open a website">
+      <nav aria-label="Website navigation">
+        <button id="back" type="button" aria-label="Back" disabled>←</button>
+        <button id="forward" type="button" aria-label="Forward" disabled>→</button>
+        <button id="reload" type="button" aria-label="Reload website" disabled>↻</button>
+      </nav>
+      <label class="visually-hidden" for="address">Website address or search</label>
+      <input id="address" type="text" placeholder="Enter a website or search…" autocomplete="off" spellcheck="false" maxlength="4096" required autofocus>
+      <button id="go" type="submit" disabled>GO ↗</button>
+    </form>
+    <div class="info-row">
+      <p id="status" role="status" aria-live="polite">Preparing the proxy…</p>
+      <details>
+        <summary>Connection settings</summary>
+        <label for="wisp">Wisp WebSocket address</label>
+        <input id="wisp" type="text" value="wss://wisp.mercurywork.shop/" autocomplete="off" spellcheck="false" maxlength="2048">
+        <small>Changes apply when you press Go.</small>
+      </details>
+    </div>
+    <section id="viewport" aria-label="Browser viewport">
+      <div id="welcome">
+        <div class="globe" aria-hidden="true">◎</div>
+        <h2>YOUR NEXT STOP.</h2>
+        <p>Enter a website above, or start with a search.</p>
+        <p class="note">Browsing connects through a third-party Wisp relay. Some websites may not work.</p>
+      </div>
+    </section>
+  </main>
+  <footer>MDTS2 EXCLUSIVE · <a href="NOTICE.txt">Source &amp; licenses</a></footer>
+</body>
+</html>
