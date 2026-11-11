@@ -59,4 +59,20 @@
   }
   arcade.addEventListener('load', addGeometryDash);
   if (arcade.contentDocument?.readyState === 'complete') addGeometryDash();
+
+  function addProxy() {
+    const doc = arcade.contentDocument;
+    const menu = doc?.getElementById('main-menu');
+    if (!menu || doc.getElementById('proxy-card')) return;
+    const link = doc.createElement('a');
+    link.id = 'proxy-card';
+    link.className = 'menu-card';
+    link.href = 'proxy/';
+    link.target = '_top';
+    link.style.textDecoration = 'none';
+    link.innerHTML = '<div class="menu-icon" aria-hidden="true">◎</div><h2>PROXY</h2><p>Browse the web with Wisp.</p>';
+    menu.appendChild(link);
+  }
+  arcade.addEventListener('load', addProxy);
+  if (arcade.contentDocument?.readyState === 'complete') addProxy();
 })();

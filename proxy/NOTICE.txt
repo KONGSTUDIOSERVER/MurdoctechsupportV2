@@ -12,7 +12,9 @@ libcurl-transport 1.5.2 - GNU AGPL v3
 https://github.com/MercuryWorkshop/CurlTransport
 https://www.npmjs.com/package/@mercuryworkshop/libcurl-transport/v/1.5.2
 
-Full licenses are in each vendor directory.
+Full licenses are in each vendor directory. The libcurl transport is loaded from the version-pinned jsDelivr npm mirror:
+https://cdn.jsdelivr.net/npm/@mercuryworkshop/libcurl-transport@1.5.2/dist/index.mjs
+Its local index.mjs is a module import wrapper; the upstream module is unmodified.
 Source for this integration: https://github.com/KONGSTUDIOSERVER/MurdoctechsupportV2/tree/main/proxy
 
 Wisp relay: wss://wisp.mercurywork.shop/
